@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 interface IFolder {
-  text: string;
+  text?: string;
   items?: Array<IFolder>;
 }
 
@@ -21,11 +21,15 @@ app.get("/", (req, res) => {
   let depth = 0;
 
   const _getAllFilesFromFolder = (dir: string) => {
-    const obj: IFolder = { text: "", items: [] };
+    const stats = fs.statSync(dir);
+    const obj: IFolder = { text: "" };
     obj.text = dir;
+    const objResult: IFolder = {
+      ...obj,
+      ...(stats.isDirectory() && { items: [] }),
+    };
     console.log(`Dir: ${dir}`);
 
-    const stats = fs.statSync(dir);
     if (stats && stats.isDirectory()) {
       fs.readdirSync(dir).forEach((file) => {
         const folder = fs.readdirSync(dir);
@@ -33,11 +37,11 @@ app.get("/", (req, res) => {
           console.log(`Folder: ${folder}`);
           const filePath = dir + "/" + file;
 
-          obj.items.push(_getAllFilesFromFolder(filePath));
+          objResult.items.push(_getAllFilesFromFolder(filePath));
         }
       });
     }
-    return obj;
+    return objResult;
   };
 
   res.send(_getAllFilesFromFolder(rootPath as string));
