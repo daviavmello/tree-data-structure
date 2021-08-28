@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
   const _getAllFilesFromFolder = (dir: string) => {
     const obj: IFolder = { text: "", items: [] };
     obj.text = dir;
-    // console.log(`Dir: ${dir}`);
+    console.log(`Dir: ${dir}`);
 
     const stats = fs.statSync(dir);
     if (stats && stats.isDirectory()) {

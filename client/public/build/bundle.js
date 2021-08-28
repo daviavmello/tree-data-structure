@@ -4789,7 +4789,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$4 = "src/App.svelte";
 
-    // (46:8) {#if folderName}
+    // (54:8) {#if folderName}
     function create_if_block$3(ctx) {
     	let h2;
     	let t0;
@@ -4812,8 +4812,8 @@ var app = (function () {
     			t2 = text(":");
     			t3 = space();
     			create_component(treeview.$$.fragment);
-    			attr_dev(h2, "class", "text-blue-600 pb-6");
-    			add_location(h2, file$4, 46, 12, 1911);
+    			attr_dev(h2, "class", "text-blue-600 pb-6 svelte-hws7ui");
+    			add_location(h2, file$4, 54, 12, 2007);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -4850,7 +4850,7 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(46:8) {#if folderName}",
+    		source: "(54:8) {#if folderName}",
     		ctx
     	});
 
@@ -4884,16 +4884,16 @@ var app = (function () {
     			input = element("input");
     			t3 = space();
     			if (if_block) if_block.c();
-    			attr_dev(h1, "class", "text-blue-600 svelte-1b2lbxp");
-    			add_location(h1, file$4, 43, 8, 1675);
+    			attr_dev(h1, "class", "text-blue-600 svelte-hws7ui");
+    			add_location(h1, file$4, 51, 8, 1771);
     			input.required = true;
     			attr_dev(input, "placeholder", "Enter a local directory name");
-    			attr_dev(input, "class", "w-full px-2 py-4");
-    			add_location(input, file$4, 44, 12, 1738);
+    			attr_dev(input, "class", "w-full px-2 py-4 svelte-hws7ui");
+    			add_location(input, file$4, 52, 12, 1834);
     			attr_dev(div, "class", "container mx-auto px-8");
-    			add_location(div, file$4, 42, 4, 1630);
-    			attr_dev(main, "class", "svelte-1b2lbxp");
-    			add_location(main, file$4, 41, 0, 1619);
+    			add_location(div, file$4, 50, 4, 1726);
+    			attr_dev(main, "class", "svelte-hws7ui");
+    			add_location(main, file$4, 49, 0, 1715);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

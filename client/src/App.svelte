@@ -24,11 +24,19 @@
 <style lang="scss">
     main {
         width: 100vw;
-        font-family: Baskerville, 'Times New Roman', Times, serif;
+        font-family: "Apple Garamond", Baskerville, 'Times New Roman', Times, serif;
         padding: 2rem;
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        
+        h1, h2 {
             font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            color: #94A3B8;
         }
     }
 </style>
