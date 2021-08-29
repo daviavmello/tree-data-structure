@@ -1,3 +1,4 @@
+const smelte = require("smelte/rollup-plugin-smelte");
 import svelte from "rollup-plugin-svelte";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -5,7 +6,6 @@ import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
-const smelte = require("smelte/rollup-plugin-smelte");
 
 const production = !process.env.ROLLUP_WATCH;
 
